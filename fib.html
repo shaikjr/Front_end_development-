@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Series</title>
+</head>
+<body>
+    <script>
+        var fib1 = 0, fib2 = 1, fib;
+        var num = prompt("Enter the number: ");
+
+        if (num > 0 && num != null) {
+            document.write("First " + num + " numbers of the Fibonacci series are: ");
+            
+            if (num >= 1) {
+                document.write(fib1 + " ");
+            }
+            if (num >= 2) {
+                document.write(fib2 + " ");
+            }
+
+            for (var i = 3; i <= num; i++) {
+                fib = fib1 + fib2;
+                document.write(fib + " ");
+                fib1 = fib2;
+                fib2 = fib;
+            }
+        } 
+        else {
+            alert("Invalid input");
+        }
+    </script>
+</body>
+</html>
